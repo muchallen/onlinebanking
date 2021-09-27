@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+*{
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-nav{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  flex: 0.7;
+  font-size: large;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.header{
+  border: 1px;
+  border-radius: 50px;
+}
+.main-nav li{
+  list-style: none;
+  margin-right:15px;
+  cursor: pointer;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.trans-action{
+
+  
+  align-items:center;
+  margin: auto;
+  padding: auto;
+ 
+}
+.trans-action.active{
+  background-color:coral;
+  align-items:center;
+  margin: auto;
+  padding: auto;
+  color:white;
+}
+
+
+
+.main-nav .active{
+color: coral;
+
+}
+.avatar-container{
+  margin-top: 20px;
+  height: 400px;
+  width: 400px;
+}
+
+.card-options{
+  height: 100px;
 }

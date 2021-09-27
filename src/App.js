@@ -1,24 +1,40 @@
-import logo from './logo.svg';
+import {BrowserRouter,Route , Switch} from 'react-router-dom'
+import Login from './Login';
 import './App.css';
+import Dashboard from './Dashboard';
+import Transfares from './Transfares';
+import RTGSTransactions from './RTGSTransactions';
+import USDTransactions from './USDTransactions';
+import Statements from './Statements';
+import SignUp from './SignUp';
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter >
+      <Switch>
+      <Route exact path="/" >
+      <Dashboard />
+      </Route>  
+      <Route path="/login" >
+      <Login />
+      </Route>
+      <Route path="/signup" >
+      <SignUp />
+      </Route>
+      <Route path="/transfares" >
+      <Transfares />
+      </Route>
+      <Route path="/statements" >
+      <Statements />
+      </Route>
+      <Route path="/rtgstransactions" >
+      <RTGSTransactions />
+      </Route>
+      <Route path="/usdtransactions" >
+      <USDTransactions />
+      </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 
